@@ -1,0 +1,23 @@
+type Food {
+    id:ID,
+    name:String,
+    protein:Int,
+    carbohydrate:Int,
+    portion:Int
+}
+
+input FoodInput {
+    id:ID,
+    name:String,
+    protein:Int,
+    carbohydrate:Int,
+    portion:Int
+}
+
+extend type Mutation {
+    saveFood(foodInput:FoodInput):Food
+}
+
+extend type Query {
+    foods:[Food]
+}

@@ -1,0 +1,23 @@
+type User {
+    id:ID,
+    user:String,
+    password:String,
+    height:Int,
+    weight:Int
+}
+
+input UserInput {
+    id:ID,
+    user:String,
+    password:String,
+    height:Int,
+    weight:Int
+}
+
+extend type Mutation {
+    saveUser(userInput:UserInput):User
+}
+
+extend type Query {
+    users:[User]
+}

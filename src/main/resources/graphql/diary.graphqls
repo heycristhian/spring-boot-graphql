@@ -1,0 +1,26 @@
+type Diary {
+    id:ID,
+    #date:Date,
+    portion:Int,
+    food:Food,
+    calories:Int,
+    menu:String,
+    user:User
+}
+
+input DiaryInput {
+    id:ID,
+    portion:Int,
+    #food:Food,
+    calories:Int,
+    menu:String,
+    #user:User
+}
+
+extend type Mutation {
+    saveDiary(diaryInput:DiaryInput):Diary
+}
+
+extend type Query {
+    diaries:[Diary]
+}
