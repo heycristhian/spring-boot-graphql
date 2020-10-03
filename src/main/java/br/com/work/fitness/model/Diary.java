@@ -20,6 +20,9 @@ public class Diary {
     private LocalDate date;
     private BigDecimal portion;
     private Food food;
+    private BigDecimal protein;
+    private BigDecimal carbohydrate;
+    private BigDecimal fat;
     private BigDecimal calories;
     private Menu menu;
     private User user;

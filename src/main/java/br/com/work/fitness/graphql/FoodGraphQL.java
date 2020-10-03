@@ -28,4 +28,8 @@ public class FoodGraphQL implements GraphQLQueryResolver, GraphQLMutationResolve
     public Food food(String id) {
         return service.findById(id);
     }
+
+    public Boolean deleteFood(String id) {
+        return service.deleteById(id);
+    }
 }

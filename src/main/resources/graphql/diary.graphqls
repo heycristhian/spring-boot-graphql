@@ -1,26 +1,30 @@
 type Diary {
     id:ID,
-    #date:Date,
-    portion:Int,
+    date:String,
+    portion:Float,
     food:Food,
-    calories:Int,
+    protein:Float,
+    carbohydrate:Float,
+    fat:Float,
+    calories:Float,
     menu:String,
     user:User
 }
 
 input DiaryInput {
     id:ID,
-    portion:Int,
-    #food:Food,
-    calories:Int,
+    portion:Float,
+    foodId:ID,
     menu:String,
-    #user:User
+    userId:ID
 }
 
 extend type Mutation {
     saveDiary(diaryInput:DiaryInput):Diary
+    deleteDiary(id:ID!):Boolean
 }
 
 extend type Query {
     diaries:[Diary]
+    diary(id:ID!):Diary
 }

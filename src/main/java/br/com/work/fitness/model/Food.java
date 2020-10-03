@@ -21,6 +21,6 @@ public class Food {
     private String name;
     private BigDecimal protein;
     private BigDecimal carbohydrate;
+    private BigDecimal fat;
     private BigDecimal portion;
-
 }

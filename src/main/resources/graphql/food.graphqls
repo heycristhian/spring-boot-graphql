@@ -1,23 +1,27 @@
 type Food {
     id:ID,
     name:String,
-    protein:Int,
-    carbohydrate:Int,
-    portion:Int
+    protein:Float,
+    carbohydrate:Float,
+    fat:Float,
+    portion:Float
 }
 
 input FoodInput {
     id:ID,
     name:String,
-    protein:Int,
-    carbohydrate:Int,
-    portion:Int
+    protein:Float,
+    carbohydrate:Float,
+    fat:Float,
+    portion:Float
 }
 
 extend type Mutation {
     saveFood(foodInput:FoodInput):Food
+    deleteFood(id:ID!):Boolean
 }
 
 extend type Query {
     foods:[Food]
+    food(id:ID!):Food
 }

@@ -31,4 +31,8 @@ public class UserGraphQL implements GraphQLQueryResolver, GraphQLMutationResolve
     public User user(String id) {
         return service.findById(id);
     }
+
+    public Boolean deleteUser(String id) {
+        return service.deleteById(id);
+    }
 }
