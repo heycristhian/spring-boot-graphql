@@ -1,6 +1,6 @@
 type User {
     id:ID,
-    user:String,
+    username:String,
     password:String,
     height:Int,
     weight:Int
@@ -8,7 +8,7 @@ type User {
 
 input UserInput {
     id:ID,
-    user:String,
+    username:String,
     password:String,
     height:Int,
     weight:Int
