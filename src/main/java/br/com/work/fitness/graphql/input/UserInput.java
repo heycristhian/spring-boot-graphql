@@ -11,10 +11,11 @@ public class UserInput {
     private String id;
     private String username;
     private String password;
+    private Integer age;
     private BigDecimal height;
     private BigDecimal weight;
 
     public User converter() {
-        return new User(this.id, this.username, this.password, this.height, this.weight, null);
+        return new User(this.id, this.username, this.password, this.age, this.height, this.weight, null, null);
     }
 }

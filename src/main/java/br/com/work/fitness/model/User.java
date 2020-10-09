@@ -23,8 +23,10 @@ public class User implements UserDetails {
     private String id;
     private String username;
     private String password;
+    private Integer age;
     private BigDecimal height;
     private BigDecimal weight;
+    private BigDecimal recommendedCalories;
     private List<Profile> profiles = new ArrayList<>();
 
     @Override

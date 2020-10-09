@@ -35,6 +35,5 @@ public class AuthController {
         } catch (AuthenticationException e) {
             return ResponseEntity.badRequest().build();
         }
-
     }
 }

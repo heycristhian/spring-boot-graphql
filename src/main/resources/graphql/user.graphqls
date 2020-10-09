@@ -2,14 +2,17 @@ type User {
     id:ID,
     username:String,
     password:String,
+    age:Int,
     height:Int,
-    weight:Int
+    weight:Int,
+    recommendedCalories:Float
 }
 
 input UserInput {
     id:ID,
     username:String,
     password:String,
+    age:Int,
     height:Int,
     weight:Int
 }

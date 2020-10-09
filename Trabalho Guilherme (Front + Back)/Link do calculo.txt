@@ -1,0 +1,10 @@
+Homens = (13,75 x peso em quilos) + (5 x altura em centímetros) – (6.76 x idade em anos) + 66.5.
+Mulheres = (9.56 x peso em quilos) + (1.85 x altura em centímetros) – (4.68 x idade em anos) + 665.
+
+1347,5
+945
+169
+66,5
+
+
+2190
