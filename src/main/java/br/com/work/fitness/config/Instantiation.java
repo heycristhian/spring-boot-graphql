@@ -31,6 +31,9 @@ public class Instantiation implements CommandLineRunner {
             User user = new User();
             user.setUsername("admin");
             user.setPassword("$2a$10$JkMVhuu5EvKGQXBLDex54.0l5CZG.P8pnhJBu0xSylrWWukyLvGjy");
+            user.setAge(25);
+            user.setHeight(BigDecimal.valueOf(190));
+            user.setWeight(BigDecimal.valueOf(90));
             userService.save(user);
 
             Food food = new Food();

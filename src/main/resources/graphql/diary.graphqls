@@ -11,6 +11,12 @@ type Diary {
     user:User
 }
 
+type TotalCalorie {
+    recommendedCalorie:Float,
+    total:Float
+    msg:String
+}
+
 input DiaryInput {
     id:ID,
     portion:Float,
@@ -27,4 +33,5 @@ extend type Mutation {
 extend type Query {
     diaries:[Diary]
     diary(id:ID!):Diary
+    totalCalorie(userId:ID!, date:String!):TotalCalorie
 }

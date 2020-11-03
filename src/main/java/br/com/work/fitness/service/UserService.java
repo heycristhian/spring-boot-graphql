@@ -43,4 +43,8 @@ public class UserService implements iService<User>{
     public User findById(String id) {
         return repository.findById(id).orElse(null);
     }
+
+    public User findByUsername(String id) {
+        return repository.findByUsername(id).orElse(null);
+    }
 }

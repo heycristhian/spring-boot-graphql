@@ -31,7 +31,7 @@ public class TokenService {
         Key signingKey = new SecretKeySpec(apiKeySecretBytes, SignatureAlgorithm.HS256.getJcaName());
 
         return Jwts.builder()
-                .setIssuer("API - Seu controle financeiro")
+                .setIssuer("API")
                 .setIssuedAt(now)
                 .setSubject(loggedUser.getId())
                 .setExpiration(Date.from(expirationDate.atStartOfDay(ZoneId.systemDefault()).toInstant()))
