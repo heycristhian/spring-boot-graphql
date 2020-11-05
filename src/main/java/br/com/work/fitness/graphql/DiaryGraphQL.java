@@ -5,6 +5,7 @@ import br.com.work.fitness.graphql.input.UserInput;
 import br.com.work.fitness.model.Diary;
 import br.com.work.fitness.model.Menu;
 import br.com.work.fitness.model.User;
+import br.com.work.fitness.model.domain.DiaryDetail;
 import br.com.work.fitness.model.domain.TotalCalorie;
 import br.com.work.fitness.service.DiaryService;
 import br.com.work.fitness.service.FoodService;
@@ -49,8 +50,12 @@ public class DiaryGraphQL implements GraphQLQueryResolver, GraphQLMutationResolv
         return service.deleteById(id);
     }
 
-    public TotalCalorie totalCalorie(String userId, String date) {
-        TotalCalorie totalCalorie = service.totalCalorie(userId, date);
-        return totalCalorie;
+    public List<TotalCalorie> totalCalorie(String userId) {
+        List<TotalCalorie> totalCalories = service.totalCalorie(userId);
+        return totalCalories;
+    }
+
+    public DiaryDetail diaryDetail(String userId, String date) {
+        return service.diaryDetail(userId, date);
     }
 }

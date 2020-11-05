@@ -11,5 +11,6 @@ public class TotalCalorie {
 
     private BigDecimal total;
     private BigDecimal recommendedCalorie;
+    private String date;
     private String msg;
 }

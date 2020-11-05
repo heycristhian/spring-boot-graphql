@@ -11,9 +11,19 @@ type Diary {
     user:User
 }
 
+type DiaryDetail {
+    date:String,
+    protein:Float,
+    carbohydrate:Float,
+    fat:Float,
+    calorie:Float,
+    recommendedCalorie:Float
+}
+
 type TotalCalorie {
     recommendedCalorie:Float,
     total:Float
+    date:String
     msg:String
 }
 
@@ -33,5 +43,6 @@ extend type Mutation {
 extend type Query {
     diaries:[Diary]
     diary(id:ID!):Diary
-    totalCalorie(userId:ID!, date:String!):TotalCalorie
+    totalCalorie(userId:ID!):[TotalCalorie]
+    diaryDetail(userId:ID!, date:String!):DiaryDetail
 }

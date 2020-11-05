@@ -36,6 +36,14 @@ public class Instantiation implements CommandLineRunner {
             user.setWeight(BigDecimal.valueOf(90));
             userService.save(user);
 
+            User user2 = new User();
+            user.setUsername("heycristhian");
+            user.setPassword("$2a$10$JkMVhuu5EvKGQXBLDex54.0l5CZG.P8pnhJBu0xSylrWWukyLvGjy");
+            user.setAge(25);
+            user.setHeight(BigDecimal.valueOf(190));
+            user.setWeight(BigDecimal.valueOf(90));
+            userService.save(user2);
+
             Food food = new Food();
             food.setName("Arroz Cozido");
             food.setPortion(BigDecimal.valueOf(100));
