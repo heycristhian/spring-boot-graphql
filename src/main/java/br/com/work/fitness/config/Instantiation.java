@@ -37,11 +37,11 @@ public class Instantiation implements CommandLineRunner {
             userService.save(user);
 
             User user2 = new User();
-            user.setUsername("heycristhian");
-            user.setPassword("$2a$10$JkMVhuu5EvKGQXBLDex54.0l5CZG.P8pnhJBu0xSylrWWukyLvGjy");
-            user.setAge(25);
-            user.setHeight(BigDecimal.valueOf(190));
-            user.setWeight(BigDecimal.valueOf(90));
+            user2.setUsername("heycristhian");
+            user2.setPassword("$2a$10$JkMVhuu5EvKGQXBLDex54.0l5CZG.P8pnhJBu0xSylrWWukyLvGjy");
+            user2.setAge(25);
+            user2.setHeight(BigDecimal.valueOf(190));
+            user2.setWeight(BigDecimal.valueOf(90));
             userService.save(user2);
 
             Food food = new Food();

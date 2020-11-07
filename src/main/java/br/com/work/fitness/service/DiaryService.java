@@ -41,6 +41,10 @@ public class DiaryService implements iService<Diary> {
         return repository.findAll();
     }
 
+    public List<Diary> findAllByUser(User user) {
+        return repository.findByUser(user);
+    }
+
     @Override
     public Diary findById(String id) {
         return repository.findById(id).orElse(null);

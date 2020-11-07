@@ -9,6 +9,8 @@ type Diary {
     calories:Float,
     menu:String,
     user:User
+
+
 }
 
 type DiaryDetail {
@@ -25,6 +27,11 @@ type TotalCalorie {
     total:Float
     date:String
     msg:String
+}
+
+type DiaryInfo {
+    diaries:[Diary],
+    diaryDetail:DiaryDetail
 }
 
 input DiaryInput {
@@ -45,4 +52,5 @@ extend type Query {
     diary(id:ID!):Diary
     totalCalorie(userId:ID!):[TotalCalorie]
     diaryDetail(userId:ID!, date:String!):DiaryDetail
+    diaryInfo(userId:ID!, date:String!):DiaryInfo
 }
