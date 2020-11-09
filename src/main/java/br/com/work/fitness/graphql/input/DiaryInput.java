@@ -42,7 +42,7 @@ public class DiaryInput {
         diary.setFood(food);
         diary.setUser(user);
         diary.setMenu(this.menu);
-        diary.setProtein(food.getProtein().divide(food.getPortion()).multiply(diary.getPortion()));
+        diary.setProtein((food.getProtein().divide(food.getPortion())).multiply(diary.getPortion()));
         diary.setCarbohydrate(food.getCarbohydrate().divide(food.getPortion()).multiply(diary.getPortion()));
         diary.setFat(food.getFat().divide(food.getPortion()).multiply(diary.getPortion()));
         diary.setCalories(diary.getProtein().multiply(DiaryInput.PROTEIN_MULTIPLY)

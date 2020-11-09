@@ -14,7 +14,9 @@ import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class DiaryGraphQL implements GraphQLQueryResolver, GraphQLMutationResolver {
@@ -51,13 +53,17 @@ public class DiaryGraphQL implements GraphQLQueryResolver, GraphQLMutationResolv
         return service.diaryDetail(userId, date);
     }
 
-    public DiaryInfo diaryInfo(String userId, String date) {
+    public DiaryInfo diaryInfo(String userId, String dateString) {
         User user = userService.findById(userId);
         List<Diary> diaries = service.findAllByUser(user);
+        LocalDate date = LocalDate.parse(dateString);
+        diaries = diaries.stream()
+                .filter(diary -> diary.getDate().equals(date))
+                .collect(Collectors.toList());
 
         return DiaryInfo.builder()
                 .diaries(diaries)
-                .diaryDetail(diaryDetail(userId, date))
+                .diaryDetail(diaryDetail(userId, dateString))
                 .build();
     }
 }
